@@ -14,25 +14,49 @@ ul {
 }
 
 body {
+    border: 1px solid black;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 48px;
+}
+
+.intro-container {
+    display: flex;
+    justify-content: center;
+    background-color: #0891b2;
+}
+
+main {
+    display: flex;
+    justify-content: center;
+}
+
+.main-wrapper, .intro-wrapper {
     max-width: 1200px;
     width: 100%;
-    border: 1px solid black;
-    margin: 0 auto;
+}
+
+.intro-wrapper {
+    padding: 24px 0px;
 }
 
 .portrait {
     width: 520px;
-    height: 292px;
-    
-    background-image: url("./res/portrait_1920.jpg");
-    background-repeat: no-repeat;
-    background-size: 640px auto;
-    background-position: top;
+
     flex-shrink: 0;
     border-radius: 4px;
 
     z-index: 2;
     box-shadow: 0px 0px 4px black;
+
+    display: flex;
+    align-items: end;
+    h3 {
+        color: white;
+        font-weight: normal;
+        font-size: xx-large;
+    }
 }
 
 .self-intro {
@@ -43,13 +67,15 @@ body {
 .self-intro > .description {
     padding: 12px 24px;
     box-shadow: 0px 0px 4px black;
-    font-size: 16px;
+    font-size: 18px;
     display: flex;
     flex-direction: column;
 
     > div > p {
         color: grey;
     }
+
+    background-color: white;
 }
 
 .main-links {
@@ -64,5 +90,92 @@ body {
 }
 
 .project-container {
-    
+    display: grid;
+    gap: 40px;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+}
+
+.project-card {
+    border-radius: 4px;
+    box-shadow: 0px 0px 4px black;
+    background-color: white;
+
+    .img-placeholder {
+        border-top-left-radius: 4px;
+        border-top-right-radius: 4px;
+        height: 200px;
+        background-color: cyan;
+    }
+    .header, ul {
+        display: flex;
+    }
+    ul {
+        gap: 8px;
+        margin-left: auto;
+
+        img {
+            width: 24px;
+        }
+    }
+    .discussion {
+        padding: 16px 18px;
+    }
+    p {
+        font-size: 14px;
+        color: rgb(65, 65, 65);
+        max-width: 300px;
+    }
+}
+
+footer {
+    background-color: #0891b2;
+    color: white;
+    display: flex;
+    justify-content: center;
+}
+
+.footer-wrapper {
+    display: flex;
+    justify-content: space-between;
+    gap: 16px;
+    max-width: 1200px;
+    width: 100%;
+    padding: 32px;
+
+    .img-placeholder {
+        width: 640px;
+        src: url("./res/portrait_1920.jpg");
+        
+    }
+
+    .contact-info {
+        display: flex;
+        flex-direction: column;
+        gap: 16px;
+
+        div {
+            max-width: 280px;
+        }
+    }
+
+    .contact-list {
+        display: flex;
+        flex-direction: column;
+        gap: 16px;
+
+        img {
+            width: 20px;
+            filter:invert(100%);
+        }
+
+        li {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+    }
+
+    .main-links {
+        align-self: flex-start;
+    }
 }
