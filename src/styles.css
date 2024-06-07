@@ -221,3 +221,20 @@ footer {
         }
     }
 }
+
+@media (hover: hover) {
+    .project-card {
+        transition-property: transform;
+        transition-duration: 0.25s;
+    }
+
+    .project-card:hover {
+        transform: scale(1.05);
+    }
+}
+
+@media (hover: hover) and (max-width: 1000px) {
+    .project-card:hover {
+        transform: scale(1.02);
+    }
+}
