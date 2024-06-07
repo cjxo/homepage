@@ -1,10 +1,11 @@
 import "./styles.css"
 import GithubMark from "./res/github-mark.png";
-import OpenInNew from "./res/open-in-new.svg";
+import OpenInNew from "./res/open-in-new.png";
 
 import WeatherAppPic from "./res/weather-app-pic.png";
 import RestaurantPagePic from "./res/restaurant-page-pic.png";
 import AdminDashboardPic from "./res/admin-dashboard2.png";
+import BattleshipPic from "./res/battleship-pic.png";
 
 function createLinkedImage(src, href="#") {
     const a = document.createElement("a");
@@ -81,7 +82,5 @@ divProjectContainer.append(
     createProjectCard("Weather App", "Short description of the project. Just a couple sentences will do.", "https://github.com/cjxo/top-weather-app", "https://cjxo.github.io/top-weather-app/", WeatherAppPic),
     createProjectCard("Restaurant Page", "A restaurant that showcases unforgettable dining experience with ducks.", "https://github.com/cjxo/Restaurant-Page", "https://cjxo.github.io/Restaurant-Page/", RestaurantPagePic),
     createProjectCard("Admin Dashboard", "Short description of the project. Just a couple sentences will do.", "https://github.com/cjxo/admin-dashboard", "https://cjxo.github.io/admin-dashboard/", AdminDashboardPic),
-    createProjectCard("Project Name", "Short description of the project. Just a couple sentences will do."),
-    createProjectCard("Project Name", "Short description of the project. Just a couple sentences will do."),
-    createProjectCard("Project Name", "Short description of the project. Just a couple sentences will do."),
+    createProjectCard("Battleship Game", "Short description of the project. Just a couple sentences will do.", "https://github.com/cjxo/top-battle-ship", "https://cjxo.github.io/top-battle-ship/", BattleshipPic),
 )
